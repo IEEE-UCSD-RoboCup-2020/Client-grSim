@@ -1,9 +1,0 @@
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/CMakeFiles/rebuild_cache.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/CMakeFiles/edit_cache.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/CMakeFiles/test.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/CMakeFiles/proto_gen.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/CMakeFiles/client.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/proto/CMakeFiles/rebuild_cache.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/proto/CMakeFiles/edit_cache.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/proto/CMakeFiles/proto.dir
-/home/samuelluohaoen/Code/RoboCup/Client-grSim/build/proto/CMakeFiles/test.dir
