@@ -45,7 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_proto_2fvFirmware_5fAPI_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTableField entries[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
@@ -74,7 +74,7 @@ PROTOBUF_NAMESPACE_CLOSE
 class Vec_2D PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Vec_2D) */ {
  public:
-  inline Vec_2D() : Vec_2D(nullptr) {}
+  inline Vec_2D() : Vec_2D(nullptr) {};
   virtual ~Vec_2D();
 
   Vec_2D(const Vec_2D& from);
@@ -222,7 +222,7 @@ class Vec_2D PROTOBUF_FINAL :
 class VF_Commands PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VF_Commands) */ {
  public:
-  inline VF_Commands() : VF_Commands(nullptr) {}
+  inline VF_Commands() : VF_Commands(nullptr) {};
   virtual ~VF_Commands();
 
   VF_Commands(const VF_Commands& from);
@@ -421,7 +421,7 @@ class VF_Commands PROTOBUF_FINAL :
 class VF_Data PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:VF_Data) */ {
  public:
-  inline VF_Data() : VF_Data(nullptr) {}
+  inline VF_Data() : VF_Data(nullptr) {};
   virtual ~VF_Data();
 
   VF_Data(const VF_Data& from);
@@ -715,9 +715,7 @@ inline void VF_Commands::unsafe_arena_set_allocated_translational_output(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:VF_Commands.translational_output)
 }
 inline ::Vec_2D* VF_Commands::release_translational_output() {
-  
-  ::Vec_2D* temp = translational_output_;
-  translational_output_ = nullptr;
+  auto temp = unsafe_arena_release_translational_output();
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
@@ -818,9 +816,7 @@ inline void VF_Commands::unsafe_arena_set_allocated_kicker(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:VF_Commands.kicker)
 }
 inline ::Vec_2D* VF_Commands::release_kicker() {
-  
-  ::Vec_2D* temp = kicker_;
-  kicker_ = nullptr;
+  auto temp = unsafe_arena_release_kicker();
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
@@ -925,9 +921,7 @@ inline void VF_Data::unsafe_arena_set_allocated_translational_displacement(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:VF_Data.translational_displacement)
 }
 inline ::Vec_2D* VF_Data::release_translational_displacement() {
-  
-  ::Vec_2D* temp = translational_displacement_;
-  translational_displacement_ = nullptr;
+  auto temp = unsafe_arena_release_translational_displacement();
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
@@ -1008,9 +1002,7 @@ inline void VF_Data::unsafe_arena_set_allocated_translational_velocity(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:VF_Data.translational_velocity)
 }
 inline ::Vec_2D* VF_Data::release_translational_velocity() {
-  
-  ::Vec_2D* temp = translational_velocity_;
-  translational_velocity_ = nullptr;
+  auto temp = unsafe_arena_release_translational_velocity();
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }

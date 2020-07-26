@@ -45,7 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_proto_2fmessage_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTableField entries[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
@@ -69,7 +69,7 @@ namespace example {
 class Message PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:example.Message) */ {
  public:
-  inline Message() : Message(nullptr) {}
+  inline Message() : Message(nullptr) {};
   virtual ~Message();
 
   Message(const Message& from);
@@ -202,6 +202,15 @@ class Message PROTOBUF_FINAL :
   std::string* mutable_mesg();
   std::string* release_mesg();
   void set_allocated_mesg(std::string* mesg);
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  std::string* unsafe_arena_release_mesg();
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  void unsafe_arena_set_allocated_mesg(
+      std::string* mesg);
   private:
   const std::string& _internal_mesg() const;
   void _internal_set_mesg(const std::string& value);
@@ -303,6 +312,25 @@ inline void Message::set_allocated_mesg(std::string* mesg) {
   mesg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), mesg,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:example.Message.mesg)
+}
+inline std::string* Message::unsafe_arena_release_mesg() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:example.Message.mesg)
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  _has_bits_[0] &= ~0x00000001u;
+  return mesg_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      GetArena());
+}
+inline void Message::unsafe_arena_set_allocated_mesg(
+    std::string* mesg) {
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  if (mesg != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  mesg_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      mesg, GetArena());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:example.Message.mesg)
 }
 
 #ifdef __GNUC__

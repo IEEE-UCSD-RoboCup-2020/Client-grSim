@@ -58,11 +58,16 @@ int main(int argc, char* argv[])
             if(toupper(line.at(0)) == 'Y') 
             {
                 commands.set_init(true);
+                commands.SerializeToString(&output);
+                output += "\n";
+                socket.write_some(boost::asio::buffer(output));
                 break;
             }
             else
             {
                 commands.set_init(false);
+                commands.SerializeToString(&output);
+                socket.write_some(boost::asio::buffer(output));
                 break;
             }
         }
@@ -99,6 +104,7 @@ int main(int argc, char* argv[])
             commands.set_allocated_kicker(&kick_vec);
             commands.set_dribbler(drib);
             commands.SerializeToString(&output);
+            output += "\n";
             socket.write_some(boost::asio::buffer(output));
             std::cout << "Packet sent." << std::endl;
             commands.release_kicker();
