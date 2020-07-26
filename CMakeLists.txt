@@ -14,8 +14,8 @@ enable_testing()
 add_subdirectory(proto)
 
 add_custom_target(proto_gen 
-    COMMAND protoc -I=${CMAKE_CURRENT_SOURCE_DIR} --cpp_out=${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/proto/message.proto
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/proto/message.proto)
+    COMMAND protoc -I=${CMAKE_CURRENT_SOURCE_DIR} --cpp_out=${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/proto/*.proto
+    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/proto/*.proto)
 
 
 find_package(Boost REQUIRED COMPONENTS date_time chrono system thread)
