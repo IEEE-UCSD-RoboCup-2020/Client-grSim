@@ -1,10 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(This client)
-
 set(CMAKE_CXX_FLAGS "-g -Wall -Werror -std=c++14")
 
-project(${This})
+project(client)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -24,6 +22,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/proto)
 
 include_directories(${Boost_INCLUDE_DIRS})
 
-add_executable(${This} Client.cpp)
+add_executable(client Client.cpp)
+add_executable(client_udp Client_Udp.cpp)
 
-target_link_libraries(${This} proto ${PROTOBUF_LIBRARY} ${Boost_LIBRARIES})
+target_link_libraries(client proto ${PROTOBUF_LIBRARY} ${Boost_LIBRARIES})
+target_link_libraries(client_udp proto ${PROTOBUF_LIBRARY} ${Boost_LIBRARIES})
